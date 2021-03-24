@@ -3,3 +3,4 @@
 2. <code>2-path</code> Adding <code>/action</code> to the <code>PATH</code>.
 3. <code>3-paths</code> Counts the number of directories in the <code>PATH</code>.
 4. <code>4-global_variables</code> Lists environment variables.
+5. <code>5-local_variables</code> Lists all local variables and environment variables, and functions..
