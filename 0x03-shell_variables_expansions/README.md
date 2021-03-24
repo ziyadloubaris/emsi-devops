@@ -3,5 +3,6 @@
 2. <code>2-path</code> Adding <code>/action</code> to the <code>PATH</code>.
 3. <code>3-paths</code> Counts the number of directories in the <code>PATH</code>.
 4. <code>4-global_variables</code> Lists environment variables.
-5. <code>5-local_variables</code> Lists all local variables and environment variables, and functions..
-6. <code>6-create_local_variable</code> creates a new local variable
+5. <code>5-local_variables</code> Lists all local variables and environment variables, and functions.
+6. <code>6-create_local_variable</code> creates a new local variable.
+7. <code>7-create_global_variable</code> creates a new global variable.
