@@ -1,1 +1,17 @@
 # emsi-devops
+
+## 0x00-ssh_key
+
+- <code>0-RSA_public_key.pub</code> contains my RSA public key
+
+## 0x03-shell_variables_expansions
+
+- <code>0-alias</code> File create a shortcut commande on linux.
+- <code>1-hello_you</code> Print hello user, where user is the current Linux user.
+- <code>2-path</code> Adding <code>/action</code> to the <code>PATH</code>.
+- <code>3-paths</code> Counts the number of directories in the <code>PATH</code>.
+- <code>4-global_variables</code> Lists environment variables.
+- <code>5-local_variables</code> Lists all local variables and environment variables, and functions.
+- <code>6-create_local_variable</code> creates a new local variable.
+- <code>7-create_global_variable</code> creates a new global variable.
+- <code>8-true_knowledge</code> Addition of 128 with the value stored in the environment variable TRUEKNOWLEDGE
