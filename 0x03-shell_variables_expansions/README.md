@@ -8,3 +8,4 @@
 7. <code>7-create_global_variable</code> creates a new global variable.
 8. <code>8-true_knowledge</code> Addition of 128 with the value stored in the environment variable <code>TRUEKNOWLEDGE</code>.
 9. <code>9-divide_and_rule</code> Prints the result of <code>POWER</code> divided by <code>DIVIDE</code>.
+10. <code>10-love_exponent_breath</code> Prints the result of <code>BREATH</code> to the power <code>LOVE</code>.
