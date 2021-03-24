@@ -14,4 +14,5 @@
 - <code>5-local_variables</code> Lists all local variables and environment variables, and functions.
 - <code>6-create_local_variable</code> creates a new local variable.
 - <code>7-create_global_variable</code> creates a new global variable.
-- <code>8-true_knowledge</code> Addition of 128 with the value stored in the environment variable TRUEKNOWLEDGE
+- <code>8-true_knowledge</code> Addition of 128 with the value stored in the environment variable <code>TRUEKNOWLEDGE</code>.
+- <code>9-divide_and_rule</code> Prints the result of <code>POWER</code> divided by <code>DIVIDE</code>.
