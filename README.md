@@ -4,6 +4,10 @@
 
 - <code>0-RSA_public_key.pub</code> contains my RSA public key
 
+## 0x01-ssh
+
+- <code>0-use_a_private_key</code> Script to connect to my server using the private key <code>~/.ssh/holberton</code> with the user <code>ubuntu</code>
+
 ## 0x03-shell_variables_expansions
 
 - <code>0-alias</code> File create a shortcut commande on linux.
