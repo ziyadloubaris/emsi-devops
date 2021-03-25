@@ -3,3 +3,4 @@
    - Name of the created private key <code>holberton</code>
    - Number of bits in the created key <code>4096</code>
    - Passphrase of the created private key <code>betty</code>
+2. <code>2-ssh_config</code> Configuration of my Ubuntu Vagrant machine has an SSH configuration file for the local SSH client
