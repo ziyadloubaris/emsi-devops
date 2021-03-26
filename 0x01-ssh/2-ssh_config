@@ -50,3 +50,4 @@ GSSAPIAuthentication yes
 GSSAPIDelegateCredentials no
 PasswordAuthentication no
 IdentityFile ~/.ssh/holberton
+PreferredAuthentications publickey
