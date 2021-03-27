@@ -30,7 +30,7 @@
 - <code>9-divide_and_rule</code> Prints the result of <code>POWER</code> divided by <code>DIVIDE</code>.
 - <code>10-love_exponent_breath</code> Prints the result of <code>BREATH</code> to the power <code>LOVE</code>.
 
-11. <code>11-binary_to_decimal</code> Script that converts a number from base 2 to base 10.
-12. <code>12-combinations</code> Script that prints all possible combinations of two letters, except <code>oo</code>.
-13. <code>13-print_float</code> Script that prints a number with two decimal places.
-14. <code>14-decimal_to_hexadecimal</code> Script that converts a number from base 10 to base 16.
+* <code>11-binary_to_decimal</code> Script that converts a number from base 2 to base 10.
+* <code>12-combinations</code> Script that prints all possible combinations of two letters, except <code>oo</code>.
+* <code>13-print_float</code> Script that prints a number with two decimal places.
+* <code>14-decimal_to_hexadecimal</code> Script that converts a number from base 10 to base 16.
