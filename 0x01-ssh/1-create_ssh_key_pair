@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# connecting into my server using private key
-ssh-keygen -b 4096 -t rsa -f holberton -q -N betty
+# creates an RSA key pair
+ssh-keygen -f holberton -b 4096 -P Betty
