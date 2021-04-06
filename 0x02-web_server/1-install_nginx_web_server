@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #install nginx 
 
-sudo apt-get update -y
-sudo apt-get install nginx -y
+sudo apt-get -y update
+sudo apt-get -y install nginx
 sudo echo 'Holberton School for the win!' | sudo tee /usr/share/nginx/html/index.html
 sudo service nginx start
