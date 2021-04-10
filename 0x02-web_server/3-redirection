@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 #configuring nginx server to /redirect_me to another page.
-apt-get -y update
-apt-get -y install nginx
-sed -i '0,/listen .*/s//listen 80 default_server;/' /etc/nginx/sites-available/default
-
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo sed -i '0,/listen .*/s//listen 80 default_server;/' /etc/nginx/sites-available/default
 sudo echo 'Holberton School for the win!' | sudo tee /var/www/html/index.nginx-debian.html
-kekra="\\\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=yh_0HkMtBHs;\n\t}\n"
-sudo sed -i "49i $kekra" /etc/nginx/sites-available/default
+linkedin="\\\tlocation /redirect_me {\n\t\t return 301 https://www.linkedin.com/in/loubaris-ziyad-a3798320a/;\n\t}\n"
+sudo sed -i "49i $linkedin" /etc/nginx/sites-available/default
 service nginx restart
