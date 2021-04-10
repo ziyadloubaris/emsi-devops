@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-#configuring nginx server to /redirect_me to another page.
-apt-get -y update
-apt-get -y install nginx
-sed -i '0,/listen .*/s//listen 80 default_server;/' /etc/nginx/sites-available/default
+# Configure Nginx server so that /redirect_me is redirecting to another page
 
-sudo echo 'Holberton School for the win!' | sudo tee /var/www/html/index.nginx-debian.html
-kekra="\\\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=yh_0HkMtBHs;\n\t}\n"
-sudo sed -i "49i $kekra" /etc/nginx/sites-available/default
-service nginx restart
+ADD301_REDIRECT="\\\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
+
+sudo apt-get update
+sudo apt-get -y install nginx
+echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+sudo sed -i "30i $ADD301_REDIRECT" /etc/nginx/sites-available/default
+sudo service nginx start
+sudo nginx -t
+sudo systemctl restart nginx
