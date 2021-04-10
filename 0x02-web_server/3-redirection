@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Configure Nginx server so that /redirect_me is redirecting to another page
 
-ADD301_REDIRECT="\\\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
+redirect_me="\\\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
 
 sudo apt-get update
 sudo apt-get -y install nginx
 echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
-sudo sed -i "30i $ADD301_REDIRECT" /etc/nginx/sites-available/default
+sudo sed -i "30i $redirect_me" /etc/nginx/sites-available/default
 sudo service nginx start
 sudo nginx -t
 sudo systemctl restart nginx
