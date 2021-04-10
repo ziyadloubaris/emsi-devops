@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #install nginx 
-sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo apt-get -y install ufw
-sudo ufw allow 'Nginx HTTP'
-sudo chmod a+rwx /var/www/html/index.nginx-debian.html
-sudo echo 'Holberton School' | sudo tee /var/www/html/index.nginx-debian.html
-sudo service nginx restart
-sudo cat /var/log/nginx/error.log
+#!/usr/bin/env bash
+#install nginx 
+apt-get -y update
+apt-get -y install nginx
+sed -i '0,/listen .*/s//listen 80 default_server;/' /etc/nginx/sites-available/default
+sudo echo 'Holberton School for the win!' | sudo tee /var/www/html/index.nginx-debian.html
+service nginx restart
+
