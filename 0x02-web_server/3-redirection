@@ -1,15 +1,10 @@
 #!/usr/bin/env bash
-#configuring nginx server to /redirect_me to another page.
-# Configure Nginx server so that /redirect_me is redirecting to another page
-# redirection must be a “301 Moved Permanently”
+#install nginx 
+MYGITHUB="\\\tlocation /redirect_me {\n\t\t return 301 https://github.com/Ziyadloubaris;\n\t}\n"
 
-ADD301_REDIRECT="\\\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
-
-sudo apt-get update
-sudo apt-get -y install nginx
-#sudo service nginx start
-echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
-sudo sed -i "30i $ADD301_REDIRECT" /etc/nginx/sites-available/default #add at line 30
-sudo service nginx start
-sudo nginx -t
-sudo systemctl restart nginx
+apt-get -y update
+apt-get -y install nginx
+sed -i '0,/listen .*/s//listen 80 default_server;/' /etc/nginx/sites-available/default
+sudo sed -i "30i $MYGITHUB" /etc/nginx/sites-available/default 
+sudo echo 'Holberton School for the win!' | sudo tee /var/www/html/index.nginx-debian.html
+service nginx restart
