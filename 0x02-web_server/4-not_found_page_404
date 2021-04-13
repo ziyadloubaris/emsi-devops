@@ -7,7 +7,6 @@ apt-get -y install nginx
 sed -i '0,/listen .*/s//listen 80 default_server;/' /etc/nginx/sites-available/default
 sudo sed -i "30i $MYGITHUB" /etc/nginx/sites-available/default 
 sudo echo 'Holberton School for the win!' | sudo tee /var/www/html/index.nginx-debian.html
-sudo echo "Ceci n'est pas une page" |sudo tee /usr/share/nginx/ERROR404.html
+sudo echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/ERROR404.html
 sudo sed -i "25i \\\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n}" /etc/nginx/sites-available/default
 service nginx restart
-
