@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Configure Nginx server so that /redirect_me is redirecting to another page
-
-REDIRECT="\\\tlocation /redirect_me {\n\t\t return 301 https://www.linkedin.com/in/loubaris-ziyad-a3798320a;\n\t}\n"
-sudo apt-get update
-sudo apt-get -y install nginx
-echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
-sudo sed -i "30i $REDIRECT" /etc/nginx/sites-available/default
-sudo service nginx start
+#configuring nginx server to /redirect_me to another page.
+link="\\\tlocation /redirect_me {\n\t\t return 301 https://www.linkedin.com/in/loubaris-ziyad-a3798320a;\n\t}\n"
+apt-get update
+apt-get -y install nginx
+sed -i '0,/listen .*/s//listen 80 default_server;/' /etc/nginx/sites-available/default
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sed -i "49i $link" /etc/nginx/sites-available/default
+service nginx restart
