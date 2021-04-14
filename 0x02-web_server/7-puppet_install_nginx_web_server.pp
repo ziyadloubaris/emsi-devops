@@ -1,17 +1,17 @@
-# pupet to install nginx
+# Puppet manifest to install nginx
 package { 'nginx':
   ensure => installed,
 }
 
-file_line { 'redirect_me':
+file_line { 'aaaaa':
   ensure => 'present',
   path   => '/etc/nginx/sites-available/default',
   after  => 'listen 80 default_server;',
-  line   => 'return 301 https://www.linkedin.com/in/loubaris-ziyad-a3798320a/;',
+  line   => 'rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
 }
 
-file { '/var/www/html/index.nginx-debian.html':
-content => 'Holberton School',
+file { '/var/www/html/index.html':
+  content => 'Holberton School',
 }
 
 service { 'nginx':
