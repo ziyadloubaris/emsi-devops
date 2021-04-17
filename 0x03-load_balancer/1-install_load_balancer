@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#  Bash script that configures a new Ubuntu machine to HAproxy
+apt-get update
+apt-get -y install software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-2.0
+apt-get update
+apt-get -y install haproxy=2.0.\*
+echo "frontend load-banlancer
+    bind *:80
+    mode http
+    default_backend web-backend" >> /etc/haproxy/haproxy.cfg
+echo "backend web-backend
+    balance roundrobin
+    server 3121-web-01 34.75.200.109:80 check
+    server 3121-web-02 35.227.110.197:80 check" >> /etc/haproxy/haproxy.cfg
+service haproxy restart
