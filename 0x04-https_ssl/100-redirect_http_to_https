@@ -38,7 +38,7 @@ defaults
 
 frontend www-http
         bind *:80
-        reqadd X-Forwarded-Proto:\ http
+        reqadd X-Forwarded-Proto:\ https
         default_backend www-backend
 
 frontend www-https
