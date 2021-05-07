@@ -1,9 +1,25 @@
 #!/usr/bin/python3
-import sys
+"""
+Query Reddit API for number of subscribers for a given subreddit
+"""
+import requests
 
-if __name__ == '__main__':
-    number_of_subscribers = __import__('0-subs').number_of_subscribers
-    if len(sys.argv) < 2:
-        print("Please pass an argument for the subreddit to search.")
-    else:
-        print("{:d}".format(number_of_subscribers(sys.argv[1])))
+
+def number_of_subscribers(subreddit):
+    """
+        return number of subscribers for a given subreddit
+        return 0 if invalid subreddit given
+    """
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+
+    # get user agent
+    # https://stackoverflow.com/questions/10606133/ -->
+    # sending-user-agent-using-requests-library-in-python
+    headers = requests.utils.default_headers()
+    headers.update({'User-Agent': 'My User Agent 1.0'})
+
+    r = requests.get(url, headers=headers).json()
+    subscribers = r.get('data', {}).get('subscribers')
+    if not subscribers:
+        return 0
+    return subscribers
